@@ -1,0 +1,92 @@
+W3school SQL Questions Practice:-
+/* The Square braces[] are containing the answers of the questions.*/
+
+/* SQL QUERIES FOR SELECT FUNCTION*/
+
+
+Q1- Insert the missing statement to get all the columns from the Customers table.
+Sol.- [SELECT] * FROM Customers;
+
+Q2- Write a statement that will select the City column from the Customers table.
+Sol.- [SELECT] [City] [FROM] Customers;
+
+Q3- Select all the different values from the Country column in the Customers table.
+Sol.- [SELECT] [DISTINCT] Country FROM Customers;
+
+/* SQL QUERIES FOR WHERE FUNCTION*/
+
+Q1- Select all records where the City column has the value "Berlin".
+Sol.- SELECT * Customers [WHERE] [City] = ["Berlin"];
+
+Q2- Use the NOT keyword to select all records where City is NOT "Berlin".
+Sol.- SELECT * Customers [WHERE NOT City] = '[Berlin]';
+
+Q3-Select all records where the CustomerID column has the value 32.
+Sol.- SELECT * FROM Customers [WHERE] CustomerID [=] [32];
+
+Q4- Select all records where the City column has the value 'Berlin' and the PostalCode column has the value 12209.
+Sol.- [SELECT] FROM * Customers [WHERE] City = "Berlin" [AND] [PostalCode] = 12209;
+
+Q5- Select all records where the City column has the value 'Berlin' or 'London'.
+Sol.- [SELECT] FROM * Customers [WHERE] City = 'Berlin' [OR] [City] = '[London]';
+
+/* SQL QUERIES FOR ORDER BY FUNCTION*/
+
+Q1- Select all records from the Customers table, sort the result alphabetically by the column City.
+Sol.- SELECT * FROM Customer [ORDER BY] [City];
+
+Q2- Select all records from the Customers table, sort the result reversed alphabetically by the column City.
+Sol.- SELECT * FROM Customer [ORDER BY] [City] [DESC];
+
+Q3- Select all records from the Customers table, sort the result alphabetically, first by the column Country, then, by the column City.
+Sol.- SELECT * FROM Customers [ORDER BY] [Country,] [City];
+
+/* SQL QUERIES FOR INSERT FUNCTION*/
+
+Q1- Insert a new record in the Customers table.
+Sol.- [INSERT INTO] Customers [(] CustomerName, Address, City, PostalCode,Country [)] [VALUES] [(] 'Hekkan Burger','Gateveien 15','Sandnes','4306','Norway' [)];
+
+/* SQL QUERIES FOR NULL FUNCTION*/
+
+Q1- Select all records from the Customers where the PostalCode column is empty.
+Sol.- SELECT * FROM Customers WHERE [PostalCode] [is] [null];
+
+Q2- Select all records from the Customers where the PostalCode column is NOT empty.
+Sol.- SELECT * FROM Customers WHERE [PostalCode] [is] [not] [null];
+
+/* SQL QUERIES FOR UPDATE FUNCTION*/
+
+
+Q1- Update the City column of all records in the Customers table.
+Sol.- [UPDATE] Customer [SET] City = 'Oslo';
+
+Q2- Set the value of the City columns to 'Oslo', but only the ones where the Country column has the value "Norway".
+Sol.- [UPDATE] Customer [SET] City = 'Oslo' [WHERE] Country = 'Norway';
+
+Q3- Update the City value and the Country value.
+Sol.- [UPDATE] Customer [SET] City = 'Oslo' [,] [Country] = 'Norway' WHERE CustomerID = 32;
+
+/* SQL QUERIES FOR UPDATE FUNCTION*/
+
+Q1- Delete all the records from the Customers table where the Country value is 'Norway'.
+Sol.- [DELETE FROM] Customers [WHERE] Country = 'Norway'
+
+Q2- Delete all the records from the Customers table.
+Sol.- [DELETE FROM] Customers;
+
+/* SQL QUERIES FOR LOGIC FUNCTION*/
+
+Q1- Use the MIN function to select the record with the smallest value of the Price column.
+Sol.- SELECT [MIN(Price)] FROM Products;
+
+Q2- Use an SQL function to select the record with the highest value of the Price column.
+Sol.- SELECT [MAX(Price)] FROM Products;
+
+Q3- Use the correct function to return the number of records that have the Price value set to 18.
+Sol.- SELECT [COUNT](*) FROM Products [WHERE] Price = 18;
+
+Q4- Use an SQL function to calculate the average price of all products.
+Sol.- SELECT [AVG(Price)] FROM Products;
+
+Q5- Use an SQL function to calculate the sum of all the Price column values in the Products table.
+Sol.- SELECT [SUM(Price)] FROM Products;
